@@ -1,0 +1,66 @@
+@import "../fonts/LatoWeb/latofonts";
+@import "../fonts/Raleway/stylesheet.css";
+
+@import "vars";
+@import "mixins";
+@import "grid";
+
+// reset defaul css styles
+@import "reset";
+
+html {
+    font-size: 15px;
+}
+
+body {
+    margin: 0;
+    font-size: 1rem;
+    font-family: $font;
+    color: #000;
+}
+
+.block-wrapper {
+    width: 100%;
+}
+
+.title,
+.subtitle {
+    font-family: $font;
+}
+
+.btn {
+    outline: none;
+    border: 1px #fff solid;
+    background: #000;
+    color: #fff;
+    font-size: 16px;
+    padding: 0.8rem 2rem;
+    cursor: pointer;
+    border-radius: 4px;
+    text-transform: uppercase;
+    transition: background 0.2s ease;
+}
+
+.btn-blue {
+    border: 1px solid #ffffff;
+    background: $brandBlue;
+
+    &:hover {
+        background: #226896;
+    }
+}
+
+.btn-white {
+    border: 1px solid #6f6d7b;
+    background: #fff;
+    color: #2a2b30;
+
+    &:hover {
+        background: #f3f3f3;
+    }
+}
+
+@import "elements/header/main";
+@import "elements/welcome/main";
+@import "elements/order/main";
+@import "elements/footer/main";

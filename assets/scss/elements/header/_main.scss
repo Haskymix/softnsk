@@ -1,0 +1,118 @@
+.header {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(16, 16, 29, 0.9);
+    transition: background 0.2s ease;
+    z-index: 3;
+    //height: 100px;
+}
+
+.header.scrolled {
+    background: rgba(16, 16, 29, 1);
+
+    .header-body {
+        margin: 1.2rem 0;
+    }
+
+    .header-logo {
+        font-size: 22px;
+    }
+}
+
+.header-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2.2rem 0;
+    transition: margin 0.2s ease;
+}
+
+.header-body__item {
+}
+
+.header-logo {
+    display: inline-block;
+    font-family: $logoFont;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 33px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-decoration: none;
+    transition: font-size 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    span {
+        color: $brandBlue;
+    }
+}
+
+.header-nav {
+}
+
+.header-nav__menu {
+    display: flex;
+    margin: 0 -30px;
+
+    li {
+        margin: 0 30px;
+        cursor: pointer;
+        position: relative;
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 0;
+            background: #fff;
+            height: 1px;
+            transition: width 0.2s ease, background 0.2s ease;
+        }
+
+        &:hover {
+            &::before {
+                width: 100%;
+            }
+        }
+    }
+
+    li,
+    a {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 16px;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        color: #ffffff;
+    }
+
+    li.active {
+        color: $brandBlue;
+
+        a {
+            color: $brandBlue;
+        }
+
+        &:hover {
+            &::before {
+                background: $brandBlue;
+            }
+        }
+    }
+}
+
+.header-burger {
+    display: none;
+}
+
+@import "media";

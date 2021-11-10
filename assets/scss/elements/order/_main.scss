@@ -1,0 +1,73 @@
+.order {
+    background: url(../img/order-bg-min.png) center center / cover no-repeat, #272733;
+}
+
+.order-body {
+    margin: 120px 0;
+}
+
+.order-title {
+    font-style: normal;
+    font-weight: 800;
+    @include responsiveFont(36, 20);
+    line-height: 140%;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 30px;
+
+    span {
+        color: $brandBlue;
+    }
+}
+
+.order-subtitle {
+    font-style: normal;
+    font-weight: normal;
+    @include responsiveFont(18, 16);
+    line-height: 130%;
+    text-align: center;
+    color: #bbb;
+}
+
+.order-scheme {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 80px -15px 0;
+}
+
+.order-scheme__item {
+    width: 209px;
+    margin: 0 15px;
+}
+
+.order-scheme-card {
+}
+
+.order-scheme-card__icon {
+    background: $brandBlue;
+    width: 95px;
+    height: 95px;
+    border: 5px #286690 solid;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.order-scheme-card__desc {
+    font-style: normal;
+    font-weight: normal;
+    @include responsiveFont(16, 14);
+    line-height: 130%;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+.order-form {
+    margin-top: 80px;
+}
+
+@import "media";

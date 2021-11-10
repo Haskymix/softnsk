@@ -1,0 +1,14 @@
+.footer {
+    background: #3d4050;
+}
+
+.footer-body {
+    display: flex;
+    margin: 30px 0;
+}
+
+.footer-body__item {
+    width: 33.33333%;
+}
+
+@import "media";
